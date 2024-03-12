@@ -3,7 +3,11 @@
 #
 # ImageName: openshift/origin-keepalived-ipfailover
 #
-FROM registry.ci.openshift.org/ocp/4.14:base
+### original image
+# FROM registry.ci.openshift.org/ocp/4.14:base
+
+### public image
+FROM registry.ci.openshift.org/openshift/release:golang-1.20
 
 RUN INSTALL_PKGS="kmod keepalived iproute psmisc nmap-ncat net-tools ipset ipset-libs procps-ng" && \
     yum install -y $INSTALL_PKGS && \
