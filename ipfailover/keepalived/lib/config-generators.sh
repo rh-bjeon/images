@@ -38,6 +38,8 @@ function generate_global_config() {
   echo "   smtp_server ${SMTP_SERVER:-"127.0.0.1"}"
   echo "   smtp_connect_timeout ${SMTP_CONNECT_TIMEOUT:-"30"}"
   echo "   router_id ${routername}"
+### customized value
+  echo "   dynamic_interfaces allow_if_changes
   echo "}"
 }
 
